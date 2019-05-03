@@ -1,0 +1,437 @@
+body, html {
+	height: 100%;
+	width: 100%;
+
+	margin: 0;
+	padding: 0;
+
+	font-size: 8px;
+
+	overflow-x: hidden;
+
+	-webkit-overflow-scrolling: touch;
+}
+
+// Flex box 
+.shrink-1 {
+	flex-shrink: 1;
+}
+
+//Dimensiones de altura
+.altura-5 {
+	height: 10%;
+}
+
+.altura-10 {
+	height: 10%;
+}
+
+.altura-12 {
+	height: 12%;
+}
+
+.altura-14 {
+	height: 14%;
+}
+
+.altura-15 {
+	height: 15%;
+}
+
+.altura-16 {
+	height: 16%;
+}
+
+.altura-20 {
+	height: 20%;
+}
+
+.altura-25 {
+	height: 25%;
+}
+
+.altura-35 {
+	height: 35%;
+}
+
+
+.altura-40 {
+	height: 50%;
+}
+
+.altura-50 {
+	height: 50%;
+}
+
+.altura-80 {
+	height: 80%
+}
+
+.altura-84 {
+	height: 84%;
+}
+
+.altura-86 {
+	height: 86%;
+}
+
+.altura-90 {
+	height: 90%;
+}
+
+.altura-100 {
+	height: 100%;
+}
+
+.altura-100-vh {
+	height: 100vh;
+}
+
+.sin-estilo-lista {
+	list-style: none;
+}
+
+//Transparencia
+
+.transparente-50 {
+	opacity: 0.5;
+}
+
+.transparente-80 {
+	opacity: 0.8;
+}
+
+.transparente-90 {
+	opacity: 0.9;
+}
+
+.transparente-100 {
+	opacity: 1;
+}
+
+// Interlineado
+
+.interlineado-1 {
+	line-height: 1;
+}
+
+.interlineado-1-15 {
+	line-height: 1.15;
+}
+
+.interlineado-1-2 {
+	line-height: 1.2;
+}
+
+.interlineado-1-5 {
+	line-height: 1.5;
+}
+
+.interlineado-2 {
+	line-height: 2;
+}
+
+
+.borde-derecha {
+	border-right: 2px solid #fff;
+}
+
+.overflow-hdn {
+	overflow: hidden;
+}
+
+.p-absolute {
+	position: absolute;
+	left: 0;
+}
+
+.p-relative {
+	position: relative;
+	left: 0;
+}
+
+.fa-sm-4x{
+	font-size: 4em!important;
+}
+
+.fa-sm-5x{
+	font-size: 5em!important;
+}
+
+.my-6 {
+	margin: 4.5rem 0;
+}
+
+.my-7 {
+	margin: 6rem 0;
+}
+
+.my-8 {
+	margin: 7.5rem 0;
+}
+
+.mt-6 {
+	margin-top: 4.5rem;
+}
+
+.pos-t-0 {
+	top: 0px!important;
+}
+
+.pos-t-1 {
+	top: .5rem;
+}
+
+.pos-t-2 {
+	top: 1rem;
+}
+
+.pos-t-3 {
+	top: 1.5rem;
+}
+
+.pos-t-4 {
+	top: 3rem;
+}
+
+.pos-l-auto {
+	left: auto;
+}
+
+.pos-l-0 {
+	left: 0px;
+}
+
+.pos-l-1 {
+	left: .5rem;
+}
+
+
+.pos-l-20-por {
+	left: 20%!important;
+}
+
+.pos-r-0 {
+	right: 0px;
+}
+
+.pos-r-1 {
+	right: .5rem;
+}
+
+.pos-r-2 {
+	right: 1rem;
+}
+
+.pos-r-3 {
+	right: 1.5rem;
+}
+
+.pos-r-4 {
+	right: 3rem;
+}
+
+.pos-b-0 {
+	bottom: 0px;
+}
+
+.pos-b-4 {
+	bottom: 1.5rem;
+}
+
+.pos-b-5 {
+	bottom: 3rem;
+}
+
+.pos-b-6 {
+	bottom: 4.5rem;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+a:focus {
+	outline: none;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: normal;
+}
+
+.sin-subrayar:hover,
+.sin-subrayar:focus {
+    text-decoration: none;
+}
+
+.subrayado {
+	text-decoration: underline!important;
+}
+
+.elemento-hover:hover .pantalla-opaca {
+	opacity: 1;
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.pantalla-opaca {
+	padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 1s;
+}
+
+//Fondos partículares
+
+
+//Estilos particulares
+a-scene {
+    position: absolute;
+}
+
+#button {
+    position: absolute;
+    background-color: aqua;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible-a {
+    display: block;
+}
+
+.main-menu-text{
+    color: white;
+    position: absolute;
+    top: 80%;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.main-menu-img{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+}
+
+.sub-menu-text{
+    color: white;
+    position: absolute;
+    text-align: left;
+    width: auto;
+    padding-top: 7%;
+}
+
+.sub-menu-img{
+    position: absolute;
+    top: 0;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+}
+
+
+.configurator-main-menu{
+    background-color: #1AB9A4;
+    position: absolute;
+    width: 9%;
+}
+
+.configurator-sub-menu{
+    position: absolute;
+    width: 15%;
+    margin-left: 9%;
+}
+
+.configurator-menu-item{
+    background-color: #1AB9A4;
+    min-width: 9%;
+    padding-top: 100%;
+}
+
+.configurator-menu-item-clicked{
+    background-color: #024C4A;
+}
+
+.configurator-menu-item:hover{
+    background-color: #024C4A;
+}
+
+.configurator-sub-menu-item{
+    width:auto;
+    background-color: #024C4A;
+    height: 4rem;
+}
+
+.configurator-sub-menu-item:hover{
+    background-color: #012625;
+}
+
+
+.configurator-sub-menu-spacer{
+    width: 100%;
+    padding-top: 60%;
+    background-color: transparent;
+}
+
+
+//and (max-device-width: 1024px)
+@media (max-width:767px) {
+	.text-xs-center {
+		text-align: center!important;
+	}	
+
+	.text-xs-left {
+		text-align: left;
+	}
+
+	.text-xs-right {
+		text-align: right;
+	}
+
+	.pos-fixed-md-down {
+		position: fixed;
+	}
+
+	.pos-absolute-md-down {
+		position: absolute;
+	}
+
+	.p-top-0-md-down {
+		top: 0px;
+	}
+
+	.p-bottom-0-md-down {
+		bottom: 0px;
+	}
+
+	.p-left-0-md-down {
+		left: 0px;
+	}
+
+	.p-right-0-md-down {
+		right: 0px;
+	}
+
+	//Estilos particulares
+
+}

@@ -1,0 +1,145 @@
+.fnt-negro,
+.fnt-negro:hover,
+.fnt-negro:focus,
+.fnt-negro:hover:focus,
+.fnt-negro:hover:active {
+	color: #000!important;
+}
+
+.fnt-blanco,
+.fnt-blanco:hover,
+.fnt-blanco:focus,
+.fnt-blanco:hover:focus,
+.fnt-blanco:hover:active   {
+	color: #fff!important;
+}
+
+.fnt-cafe,
+.fnt-cafe:hover,
+.fnt-cafe:focus,
+.fnt-cafe:hover:focus,
+.fnt-cafe:hover:active {
+	color: #6a3f24!important;
+}
+
+
+.fnt-gris-opaco,
+.fnt-gris-opaco:hover,
+.fnt-gris-opaco:focus,
+.fnt-gris-opaco:hover:focus,
+.fnt-gris-opaco:hover:active {
+	color:  #7c7b7b!important;
+}
+
+//Tamaños de tipografías
+
+.fnt-1 {
+	font-size: 1rem;
+}
+
+.fnt-1-25 {
+	font-size: 1.25rem;
+}
+
+.fnt-1-3 {
+	font-size: 1.3rem;
+}
+
+.fnt-1-5 {
+	font-size: 1.5rem;
+}
+
+.fnt-1-7 {
+	font-size: 1.7rem;
+}
+
+.fnt-1-8 {
+	font-size: 1.8rem;
+}
+
+.fnt-2 {
+	font-size: 2rem;
+}
+
+.fnt-2-5 {
+	font-size: 2.5rem;
+}
+
+.fnt-2-8 {
+	font-size: 2.8rem;
+}
+
+.fnt-3 {
+	font-size: 3rem;
+}
+
+.fnt-3-5 {
+	font-size: 3.5rem;
+}
+
+.fnt-4 {
+	font-size: 4rem;
+}
+
+.fnt-4-5 {
+	font-size: 4.5rem;
+}
+
+.fnt-5 {
+	font-size: 5rem;
+}
+
+.fnt-6 {
+	font-size: 6rem;
+}
+
+.fnt-7 {
+	font-size: 7rem;
+}
+
+.fnt-8 {
+	font-size: 8rem;
+}
+
+.fnt-9 {
+	font-size: 9rem;
+}
+
+@font-face{
+	font-family: avenir; 
+	src: url("../fonts/own-fonts/Avenir-Book-01.ttf");
+}
+
+@font-face{
+	font-family: avenir-medium; 
+	src: url("../fonts/own-fonts/Avenir-Medium-09.ttf");
+}
+
+@font-face{
+	font-family: avenir-black; 
+	src: url("../fonts/own-fonts/Avenir-Black-03.ttf");
+}
+
+@font-face{
+	font-family: avenir-heavy; 
+	src: url("../fonts/own-fonts/Avenir-Heavy-05.ttf");
+}
+
+.avenir {
+	font-family: avenir;
+}
+
+.avenir-medium {
+	font-family: avenir-medium;
+    font-weight: bold;
+}
+
+.avenir-black {
+	font-family: avenir-black;
+    font-weight: bolder;
+}
+
+.avenir-heavy {
+	font-family: avenir-heavy;
+    font-weight: bolder;
+}
