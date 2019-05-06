@@ -37,36 +37,29 @@
         <a-scene style="position: absolute;">
             <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
             <a-assets>
-                <img id="puerta-1" src="img/Puerta_1.png">
-                <img id="puerta-2" src="img/Puerta_2.png">
-                <img id="puerta-3" src="img/Puerta_3.png">
-                <img id="puerta-4" src="img/Puerta_4.png">
-                <img id="pared-1" src="img/Pared_1.png">
-                <img id="pared-2" src="img/Pared_2.png">
-                <img id="pared-3" src="img/Pared_3.png">
-                <img id="pared-4" src="img/Pared_4.png">
-                <img id="meseta-1" src="img/Meseta_1.png">
-                <img id="meseta-2" src="img/Meseta_2.png">
-                <img id="meseta-3" src="img/Meseta_3.png">
-                <img id="meseta-4" src="img/Meseta_4.png">
+                <img id="piso-1" src="img/piso_1-min.png">
+                <img id="piso-2" src="img/piso_2-min.png">
+                <img id="piso-3" src="img/piso_3-min.png">
+                <img id="gabinetes-1" src="img/gabinetes_1-min.png">
+                <img id="gabinetes-2" src="img/gabinetes_2-min.png">
+                <img id="gabinetes-3" src="img/gabinetes_3-min.png">
+                <img id="meseta-1" src="img/meseta_1-min.png">
+                <img id="meseta-2" src="img/meseta_2-min.png">
+                <img id="meseta-3" src="img/meseta_3-min.png">
             </a-assets>
-            <a-sky src="img/360.jpg" rotation="0 125 0"
+            <a-sky src="img/fondo-min.jpg" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="puerta-1-item" src="#puerta-1" rotation="0 125 0"
+            <a-sky id="piso-1-item" src="#piso-1" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="puerta-2-item" src="#puerta-2" rotation="0 125 0"
+            <a-sky id="piso-2-item" src="#piso-2" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="puerta-3-item" src="#puerta-3" rotation="0 125 0"
+            <a-sky id="piso-3-item" src="#piso-3" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="puerta-4-item"src="#puerta-4" rotation="0 125 0"
+            <a-sky id="gabinetes-1-item" src="#gabinetes-1" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="pared-1-item" src="#pared-1" rotation="0 125 0"
+            <a-sky id="gabinetes-2-item" src="#gabinetes-2" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="pared-2-item" src="#pared-2" rotation="0 125 0"
-                   material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="pared-3-item" src="#pared-3" rotation="0 125 0"
-                   material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="pared-4-item"src="#pared-4" rotation="0 125 0"
+            <a-sky id="gabinetes-3-item" src="#gabinetes-3" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
             <a-sky id="meseta-1-item" src="#meseta-1" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
@@ -74,156 +67,143 @@
                    material="transparent: true; alphaTest: 0;"></a-sky>
             <a-sky id="meseta-3-item" src="#meseta-3" rotation="0 125 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="meseta-4-item"src="#meseta-4" rotation="0 125 0"
-                   material="transparent: true; alphaTest: 0;"></a-sky>
             
         </a-scene>
 
         <div class="configurator-main-menu container-fluid px-0">
-            <div id="btn-puerta" onclick="showPuerta()" class="col-12 configurator-menu-item">
-                <img class="main-menu-img" src="img/cristal-b.svg" />
-                <p class="main-menu-text" href="#">Puerta</p>
+            <div id="btn-a" onclick="showMenuA()" class="col-12 configurator-menu-item">
+                <img class="main-menu-img" src="img/icons/piso-b.svg" />
+                <p class="main-menu-text" href="#">Piso</p>
             </div>
-            <div id="btn-pared" onclick="showPared()" class="col-12 configurator-menu-item">
-                <img class="main-menu-img" src="img/pared-b.svg" />
-                <p class="main-menu-text" href="#">Pared</p>
+            <div id="btn-b" onclick="showMenuB()" class="col-12 configurator-menu-item">
+                <img class="main-menu-img" src="img/icons/madera-b.svg" />
+                <p class="main-menu-text" href="#">Gabinetes</p>
             </div>
-            <div id="btn-meseta" onclick="showMeseta()" class="col-12 configurator-menu-item">
-                <img class="main-menu-img" src="img/countertop-b.svg" />
-                <p class="main-menu-text" href="#">Barra</p>
+            <div id="btn-c" onclick="showMenuC()" class="col-12 configurator-menu-item">
+                <img class="main-menu-img" src="img/icons/countertop-b.svg" />
+                <p class="main-menu-text" href="#">Meseta</p>
             </div>
         </div>
         
-        <div id="menu-puerta" class="position-absolute configurator-sub-menu container-fluid px-0 invisible" >
-            <div onclick="showPuertaA()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Puerta 1</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-05.png" />
-            </div>
-            <div onclick="showPuertaB()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Puerta 2</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-08.png" />
-            </div>
-            <div onclick="showPuertaC()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Puerta 3</p>
+        <div id="menu-a" class="position-absolute configurator-sub-menu container-fluid px-0 invisible" >
+            <div onclick="showMenuAOpA()" class="col-12 configurator-sub-menu-item">
+                <p class="sub-menu-text" href="#" style="color: white;">Tzalam</p>
                 <img class="sub-menu-img" src="img/variaciones/variaciones-07.png" />
             </div>
-            <div onclick="showPuertaD()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Puerta 4</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-06.png" />
+            <div onclick="showMenuAOpB()" class="col-12 configurator-sub-menu-item">
+                <p class="sub-menu-text" href="#" style="color: white;">Nogal</p>
+                <img class="sub-menu-img" src="img/variaciones/variaciones-08.png" />
+            </div>
+            <div onclick="showMenuAOpC()" class="col-12 configurator-sub-menu-item">
+                <p class="sub-menu-text" href="#" style="color: white;">Encino</p>
+                <img class="sub-menu-img" src="img/variaciones/variaciones-09.png" />
             </div>
         </div>
         
-        <div id="menu-pared" class="position-absolute configurator-sub-menu container-fluid px-0 invisible" >
+        <div id="menu-b" class="position-absolute configurator-sub-menu container-fluid px-0 invisible" >
             <div class="col-12 configurator-sub-menu-spacer">
             </div>
-            <div onclick="showParedA()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Pared 1</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-09.png" />
+            <div onclick="showMenuBOpA()" class="col-12 configurator-sub-menu-item">
+                <p class="sub-menu-text" href="#" style="color: white;">Blanco</p>
+                <img class="sub-menu-img" src="img/variaciones/variaciones-04.png" />
             </div>
-            <div onclick="showParedB()" class="col-12 configurator-sub-menu-item">
-                <p  class="sub-menu-text" href="#" style="color: white;">Pared 2</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-12.png" />
+            <div onclick="showMenuBOpB()" class="col-12 configurator-sub-menu-item">
+                <p  class="sub-menu-text" href="#" style="color: white;">Nogal</p>
+                <img class="sub-menu-img" src="img/variaciones/variaciones-05.png" />
             </div>
-            <div onclick="showParedC()" class="col-12 configurator-sub-menu-item">
-                <p  class="sub-menu-text" href="#" style="color: white;">Pared 3</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-11.png" />
-            </div>
-            <div onclick="showParedD()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Pared 4</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-10.png" />
+            <div onclick="showMenuBOpC()" class="col-12 configurator-sub-menu-item">
+                <p  class="sub-menu-text" href="#" style="color: white;">Encino</p>
+                <img class="sub-menu-img" src="img/variaciones/variaciones-06.png" />
             </div>
         </div>
     
         
-        <div id="menu-meseta" class="position-absolute configurator-sub-menu container-fluid px-0 invisible" >
+        <div id="menu-c" class="position-absolute configurator-sub-menu container-fluid px-0 invisible" >
             <div class="col-12 configurator-sub-menu-spacer">
             </div>
             <div class="col-12 configurator-sub-menu-spacer">
             </div>
-            <div onclick="showMesetaA()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Meseta 1</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-03.png" />
+            <div onclick="showMenuCOpA()" class="col-12 configurator-sub-menu-item">
+                <p class="sub-menu-text" href="#" style="color: white;">White Dalas</p>
+                <img class="sub-menu-img" src="img/variaciones/variaciones-01.png" />
             </div>
-            <div onclick="showMesetaB()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Meseta 2</p>
+            <div onclick="showMenuCOpB()" class="col-12 configurator-sub-menu-item">
+                <p class="sub-menu-text" href="#" style="color: white;">Sta. Cecilia</p>
                 <img class="sub-menu-img" src="img/variaciones/variaciones-02.png" />
             </div>
-            <div onclick="showMesetaC()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Meseta 3</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-04.png" />
-            </div>
-            <div onclick="showMesetaD()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Meseta 4</p>
-                <img class="sub-menu-img" src="img/variaciones/variaciones-01.png" />
+            <div onclick="showMenuCOpC()" class="col-12 configurator-sub-menu-item">
+                <p class="sub-menu-text" href="#" style="color: white;">Granito Grisal</p>
+                <img class="sub-menu-img" src="img/variaciones/variaciones-03.png" />
             </div>
         </div>
 
-        <!--<button id="button" onclick="myFunction()">Switch</button>-->
-
         <script>
-            var pared1 = document.querySelector("#pared-1-item");
-            var pared2 = document.querySelector("#pared-2-item");
-            var pared3 = document.querySelector("#pared-3-item");
-            var pared4 = document.querySelector("#pared-4-item");
-            pared1.setAttribute("visible",true);
-            pared2.setAttribute("visible",false);
-            pared3.setAttribute("visible",false);
-            pared4.setAttribute("visible",false);
-            var puerta1 = document.querySelector("#puerta-1-item");
-            var puerta2 = document.querySelector("#puerta-2-item");
-            var puerta3 = document.querySelector("#puerta-3-item");
-            var puerta4 = document.querySelector("#puerta-4-item");
-            puerta1.setAttribute("visible",true);
-            puerta2.setAttribute("visible",false);
-            puerta3.setAttribute("visible",false);
-            puerta4.setAttribute("visible",false);
-            var meseta1 = document.querySelector("#meseta-1-item");
-            var meseta2 = document.querySelector("#meseta-2-item");
-            var meseta3 = document.querySelector("#meseta-3-item");
-            var meseta4 = document.querySelector("#meseta-4-item");
-            meseta1.setAttribute("visible",true);
-            meseta2.setAttribute("visible",false);
-            meseta3.setAttribute("visible",false);
-            meseta4.setAttribute("visible",false);
-            var lastWallPressed=0;
+            var menuAOpA = document.querySelector("#piso-1-item");
+            var menuAOpB = document.querySelector("#piso-2-item");
+            var menuAOpC = document.querySelector("#piso-3-item");
+            menuAOpA.setAttribute("visible",true);
+            menuAOpB.setAttribute("visible",true);
+            menuAOpC.setAttribute("visible",true);
+            menuAOpB.setAttribute("visible",false);
+            menuAOpC.setAttribute("visible",false);
+            
+            var menuBOpA = document.querySelector("#gabinetes-1-item");
+            var menuBOpB = document.querySelector("#gabinetes-2-item");
+            var menuBOpC = document.querySelector("#gabinetes-3-item");
+            menuBOpA.setAttribute("visible",true);
+            menuBOpB.setAttribute("visible",true);
+            menuBOpC.setAttribute("visible",true);
+            menuBOpB.setAttribute("visible",false);
+            menuBOpC.setAttribute("visible",false);
+            
+            var menuCOpA = document.querySelector("#meseta-1-item");
+            var menuCOpB = document.querySelector("#meseta-2-item");
+            var menuCOpC = document.querySelector("#meseta-3-item");
+            menuCOpA.setAttribute("visible",true);
+            menuCOpB.setAttribute("visible",true);
+            menuCOpC.setAttribute("visible",true);
+            menuCOpB.setAttribute("visible",false);
+            menuCOpC.setAttribute("visible",false);
+                        
             var lastMenuPressed=0;
-            var puerta = false;
-            var pared = false;
-            var meseta = false;
-            function showPuerta() {
-                var mpu = document.querySelector("#menu-puerta");
-                var mpa = document.querySelector("#menu-pared");
-                var mme = document.querySelector("#menu-meseta");
-                var button = document.querySelector("#btn-puerta");
-                var btnA = document.querySelector("#btn-pared");
-                var btnB = document.querySelector("#btn-meseta");
+            var menuAOpen = false;
+            var menuBOpen = false;
+            var menuCOpen = false;
+            
+            function showMenuA() {
+                var mA = document.querySelector("#menu-a");
+                var mB = document.querySelector("#menu-b");
+                var mC = document.querySelector("#menu-c");
+                var button = document.querySelector("#btn-a");
+                var btnA = document.querySelector("#btn-b");
+                var btnB = document.querySelector("#btn-c");
                 
                 if(lastMenuPressed==1){
-                    if(pared){
-                        mpu.classList.remove("invisible");
-                        mpu.classList.add("visible-a");
+                    if(menuAOpen){
+                        mA.classList.remove("invisible");
+                        mA.classList.add("visible-a");
                         button.classList.add("configurator-menu-item-clicked");
-                        pared=false;
+                        menuAOpen=false;
                     } else {
-                        mpu.classList.remove("visible-a");
-                        mpu.classList.add("invisible");
+                        mA.classList.remove("visible-a");
+                        mA.classList.add("invisible");
                         button.classList.remove("configurator-menu-item-clicked");
-                        pared=true;
+                        menuAOpen=true;
                     }
                     
                 } else {
-                    mpu.classList.remove("visible-a");
-                    mpa.classList.remove("visible-a");
-                    mme.classList.remove("visible-a");
-                    mpu.classList.remove("invisible");
-                    mpa.classList.remove("invisible");
-                    mme.classList.remove("invisible");
+                    mA.classList.remove("visible-a");
+                    mB.classList.remove("visible-a");
+                    mC.classList.remove("visible-a");
+                    mA.classList.remove("invisible");
+                    mB.classList.remove("invisible");
+                    mC.classList.remove("invisible");
                     btnA.classList.remove("configurator-menu-item-clicked");
                     btnB.classList.remove("configurator-menu-item-clicked");
 
-                    mpu.classList.add("visible-a");
-                    mpa.classList.add("invisible");
-                    mme.classList.add("invisible");
+                    mA.classList.add("visible-a");
+                    mB.classList.add("invisible");
+                    mC.classList.add("invisible");
                     
                     button.classList.add("configurator-menu-item-clicked");
                 }
@@ -233,39 +213,39 @@
             }
             
             
-            function showPared() {
-                var mpu = document.querySelector("#menu-puerta");
-                var mpa = document.querySelector("#menu-pared");
-                var mme = document.querySelector("#menu-meseta");
-                var button = document.querySelector("#btn-pared");
-                var btnA = document.querySelector("#btn-puerta");
-                var btnB = document.querySelector("#btn-meseta");
+            function showMenuB() {
+                var mA = document.querySelector("#menu-a");
+                var mB = document.querySelector("#menu-b");
+                var mC = document.querySelector("#menu-c");
+                var button = document.querySelector("#btn-b");
+                var btnA = document.querySelector("#btn-a");
+                var btnB = document.querySelector("#btn-c");
                 
                 if(lastMenuPressed==2){
-                    if(puerta){
-                        mpa.classList.remove("invisible");
-                        mpa.classList.add("visible-a");
+                    if(menuBOpen){
+                        mB.classList.remove("invisible");
+                        mB.classList.add("visible-a");
                         button.classList.add("configurator-menu-item-clicked");
-                        puerta=false;
+                        menuBOpen=false;
                     } else {
-                        mpa.classList.remove("visible-a");
-                        mpa.classList.add("invisible");
+                        mB.classList.remove("visible-a");
+                        mB.classList.add("invisible");
                         button.classList.remove("configurator-menu-item-clicked");
-                        puerta=true;
+                        menuBOpen=true;
                     }
                 } else {
-                    mpu.classList.remove("visible-a");
-                    mpa.classList.remove("visible-a");
-                    mme.classList.remove("visible-a");
-                    mpu.classList.remove("invisible");
-                    mpa.classList.remove("invisible");
-                    mme.classList.remove("invisible");
+                    mA.classList.remove("visible-a");
+                    mB.classList.remove("visible-a");
+                    mC.classList.remove("visible-a");
+                    mA.classList.remove("invisible");
+                    mB.classList.remove("invisible");
+                    mC.classList.remove("invisible");
                     btnA.classList.remove("configurator-menu-item-clicked");
                     btnB.classList.remove("configurator-menu-item-clicked");
 
-                    mpu.classList.add("invisible");
-                    mpa.classList.add("visible-a");
-                    mme.classList.add("invisible");
+                    mA.classList.add("invisible");
+                    mB.classList.add("visible-a");
+                    mC.classList.add("invisible");
                     
                     button.classList.add("configurator-menu-item-clicked");
                     
@@ -274,39 +254,39 @@
                 lastMenuPressed=2;
             }
             
-            function showMeseta() {
-                var mpu = document.querySelector("#menu-puerta");
-                var mpa = document.querySelector("#menu-pared");
-                var mme = document.querySelector("#menu-meseta");
-                var button = document.querySelector("#btn-meseta");
-                var btnA = document.querySelector("#btn-puerta");
-                var btnB = document.querySelector("#btn-pared");
+            function showMenuC() {
+                var mA = document.querySelector("#menu-a");
+                var mB = document.querySelector("#menu-b");
+                var mC = document.querySelector("#menu-c");
+                var button = document.querySelector("#btn-c");
+                var btnA = document.querySelector("#btn-a");
+                var btnB = document.querySelector("#btn-b");
                 
                 if(lastMenuPressed==3){
-                    if(meseta){
-                        mme.classList.remove("invisible");
-                        mme.classList.add("visible-a");
+                    if(menuCOpen){
+                        mC.classList.remove("invisible");
+                        mC.classList.add("visible-a");
                         button.classList.add("configurator-menu-item-clicked");
-                        meseta=false;
+                        menuCOpen=false;
                     } else {
-                        mme.classList.remove("visible-a");
-                        mme.classList.add("invisible");
+                        mC.classList.remove("visible-a");
+                        mC.classList.add("invisible");
                         button.classList.remove("configurator-menu-item-clicked");
-                        meseta=true;
+                        menuCOpen=true;
                     }
                 } else {
-                    mpu.classList.remove("visible-a");
-                    mpa.classList.remove("visible-a");
-                    mme.classList.remove("visible-a");
-                    mpu.classList.remove("invisible");
-                    mpa.classList.remove("invisible");
-                    mme.classList.remove("invisible");
+                    mA.classList.remove("visible-a");
+                    mB.classList.remove("visible-a");
+                    mC.classList.remove("visible-a");
+                    mA.classList.remove("invisible");
+                    mB.classList.remove("invisible");
+                    mC.classList.remove("invisible");
                     btnA.classList.remove("configurator-menu-item-clicked");
                     btnB.classList.remove("configurator-menu-item-clicked");
 
-                    mpu.classList.add("invisible");
-                    mpa.classList.add("invisible");
-                    mme.classList.add("visible-a");
+                    mA.classList.add("invisible");
+                    mB.classList.add("invisible");
+                    mC.classList.add("visible-a");
                     
                     button.classList.add("configurator-menu-item-clicked");
                     
@@ -315,159 +295,70 @@
                 lastMenuPressed=3;
             }
             
-            function showPuertaA() {
-                var item1 = document.querySelector("#puerta-1-item");
-                var item2 = document.querySelector("#puerta-2-item");
-                var item3 = document.querySelector("#puerta-3-item");
-                var item4 = document.querySelector("#puerta-4-item");
-                
-                item1.setAttribute("visible",true);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",false);
+            var menuAitem1 = document.querySelector("#piso-1-item");
+            var menuAitem2 = document.querySelector("#piso-2-item");
+            var menuAitem3 = document.querySelector("#piso-3-item");
+            
+            function showMenuAOpA() {
+                menuAitem1.setAttribute("visible",true);
+                menuAitem2.setAttribute("visible",false);
+                menuAitem3.setAttribute("visible",false);                   
             }
             
-            function showPuertaB() {
-                var item1 = document.querySelector("#puerta-1-item");
-                var item2 = document.querySelector("#puerta-2-item");
-                var item3 = document.querySelector("#puerta-3-item");
-                var item4 = document.querySelector("#puerta-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",true);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",false);
-                
+            function showMenuAOpB() {
+                menuAitem1.setAttribute("visible",false);
+                menuAitem2.setAttribute("visible",true);
+                menuAitem3.setAttribute("visible",false);                   
             }
             
-            function showPuertaC() {
-                var item1 = document.querySelector("#puerta-1-item");
-                var item2 = document.querySelector("#puerta-2-item");
-                var item3 = document.querySelector("#puerta-3-item");
-                var item4 = document.querySelector("#puerta-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",true);                   
-                item4.setAttribute("visible",false);
-                
+            function showMenuAOpC() {
+                menuAitem1.setAttribute("visible",false);
+                menuAitem2.setAttribute("visible",false);
+                menuAitem3.setAttribute("visible",true);                   
             }
             
-            function showPuertaD() {
-                var item1 = document.querySelector("#puerta-1-item");
-                var item2 = document.querySelector("#puerta-2-item");
-                var item3 = document.querySelector("#puerta-3-item");
-                var item4 = document.querySelector("#puerta-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",true);
-                
+            var menuBitem1 = document.querySelector("#gabinetes-1-item");
+            var menuBitem2 = document.querySelector("#gabinetes-2-item");
+            var menuBitem3 = document.querySelector("#gabinetes-3-item");
+            
+            function showMenuBOpA() {
+                menuBitem1.setAttribute("visible",true);
+                menuBitem2.setAttribute("visible",false);
+                menuBitem3.setAttribute("visible",false);                     
             }
             
-            function showParedA() {
-                var item1 = document.querySelector("#pared-1-item");
-                var item2 = document.querySelector("#pared-2-item");
-                var item3 = document.querySelector("#pared-3-item");
-                var item4 = document.querySelector("#pared-4-item");
-                
-                item1.setAttribute("visible",true);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",false);
-                
+            function showMenuBOpB() {
+                menuBitem1.setAttribute("visible",false);
+                menuBitem2.setAttribute("visible",true);
+                menuBitem3.setAttribute("visible",false);                   
             }
             
-            function showParedB() {
-                var item1 = document.querySelector("#pared-1-item");
-                var item2 = document.querySelector("#pared-2-item");
-                var item3 = document.querySelector("#pared-3-item");
-                var item4 = document.querySelector("#pared-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",true);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",false);
-                
+            function showMenuBOpC() {
+                menuBitem1.setAttribute("visible",false);
+                menuBitem2.setAttribute("visible",false);
+                menuBitem3.setAttribute("visible",true);                   
             }
             
-            function showParedC() {
-                var item1 = document.querySelector("#pared-1-item");
-                var item2 = document.querySelector("#pared-2-item");
-                var item3 = document.querySelector("#pared-3-item");
-                var item4 = document.querySelector("#pared-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",true);                   
-                item4.setAttribute("visible",false);
-                
+            var menuCitem1 = document.querySelector("#meseta-1-item");
+            var menuCitem2 = document.querySelector("#meseta-2-item");
+            var menuCitem3 = document.querySelector("#meseta-3-item");
+            
+            function showMenuCOpA() {
+                menuCitem1.setAttribute("visible",true);
+                menuCitem2.setAttribute("visible",false);
+                menuCitem3.setAttribute("visible",false);                   
             }
             
-            function showParedD() {
-                var item1 = document.querySelector("#pared-1-item");
-                var item2 = document.querySelector("#pared-2-item");
-                var item3 = document.querySelector("#pared-3-item");
-                var item4 = document.querySelector("#pared-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",true);
-                
+            function showMenuCOpB() {
+                menuCitem1.setAttribute("visible",false);
+                menuCitem2.setAttribute("visible",true);
+                menuCitem3.setAttribute("visible",false);                   
             }
             
-            function showMesetaA() {
-                var item1 = document.querySelector("#meseta-1-item");
-                var item2 = document.querySelector("#meseta-2-item");
-                var item3 = document.querySelector("#meseta-3-item");
-                var item4 = document.querySelector("#meseta-4-item");
-                
-                item1.setAttribute("visible",true);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",false);
-                
-            }
-            
-            function showMesetaB() {
-                var item1 = document.querySelector("#meseta-1-item");
-                var item2 = document.querySelector("#meseta-2-item");
-                var item3 = document.querySelector("#meseta-3-item");
-                var item4 = document.querySelector("#meseta-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",true);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",false);
-                
-            }
-            
-            function showMesetaC() {
-                var item1 = document.querySelector("#meseta-1-item");
-                var item2 = document.querySelector("#meseta-2-item");
-                var item3 = document.querySelector("#meseta-3-item");
-                var item4 = document.querySelector("#meseta-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",true);                   
-                item4.setAttribute("visible",false);
-                
-            }
-            
-            function showMesetaD() {
-                var item1 = document.querySelector("#meseta-1-item");
-                var item2 = document.querySelector("#meseta-2-item");
-                var item3 = document.querySelector("#meseta-3-item");
-                var item4 = document.querySelector("#meseta-4-item");
-                
-                item1.setAttribute("visible",false);
-                item2.setAttribute("visible",false);
-                item3.setAttribute("visible",false);                   
-                item4.setAttribute("visible",true);
-                
+            function showMenuCOpC() {
+                menuCitem1.setAttribute("visible",false);
+                menuCitem2.setAttribute("visible",false);
+                menuCitem3.setAttribute("visible",true);                   
             }
             
         </script>
