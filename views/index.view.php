@@ -27,7 +27,7 @@
         
         <!-- AFrame - Needs to be on head -->
         <?php echo $aframe_js; ?>
-        
+                
 	</head>
     <body>
 
@@ -35,7 +35,9 @@
     
         
         <a-scene style="position: absolute;">
-            <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+            <!--<a-entity camera >
+            </a-entity>-->
+            
             <a-assets>
                 <img id="piso-1" src="img/piso_1-min.png">
                 <img id="piso-2" src="img/piso_2-min.png">
@@ -47,27 +49,57 @@
                 <img id="meseta-2" src="img/meseta_2-min.png">
                 <img id="meseta-3" src="img/meseta_3-min.png">
             </a-assets>
-            <a-sky src="img/fondo-min.jpg" rotation="0 125 0"
+            <a-sky src="img/fondo-min.jpg" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="piso-1-item" src="#piso-1" rotation="0 125 0"
+            <a-sky id="piso-1-item" src="#piso-1" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="piso-2-item" src="#piso-2" rotation="0 125 0"
+            <a-sky id="piso-2-item" src="#piso-2" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="piso-3-item" src="#piso-3" rotation="0 125 0"
+            <a-sky id="piso-3-item" src="#piso-3" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="gabinetes-1-item" src="#gabinetes-1" rotation="0 125 0"
+            <a-sky id="gabinetes-1-item" src="#gabinetes-1" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="gabinetes-2-item" src="#gabinetes-2" rotation="0 125 0"
+            <a-sky id="gabinetes-2-item" src="#gabinetes-2" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="gabinetes-3-item" src="#gabinetes-3" rotation="0 125 0"
+            <a-sky id="gabinetes-3-item" src="#gabinetes-3" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="meseta-1-item" src="#meseta-1" rotation="0 125 0"
+            <a-sky id="meseta-1-item" src="#meseta-1" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="meseta-2-item" src="#meseta-2" rotation="0 125 0"
+            <a-sky id="meseta-2-item" src="#meseta-2" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
-            <a-sky id="meseta-3-item" src="#meseta-3" rotation="0 125 0"
+            <a-sky id="meseta-3-item" src="#meseta-3" rotation="0 0 0"
                    material="transparent: true; alphaTest: 0;"></a-sky>
+            <!-- "button" -->
+            <a-entity 
+                      animation="property: geometry.radius; easing: linear; loop: true; from: 1.8; to: 2; dur: 2000"
+                      position="-20.4 0 -46.6" rotation="0 90 0" 
+                      geometry="primitive: torus; radius: 0.5; radiusTubular: 0.08; arc: 360"
+                      material="side: double; color:#1AB9A4">
+            </a-entity>
             
+            <a-entity 
+                      id="button-change-environment"
+                      animation="property: geometry.radius; easing: linear; loop: true; from: 0.9; to: 1; dur: 2000"
+                      class="clickable" position="-20.4 0 -46.6" rotation="0 90 0" 
+                      geometry="primitive: torus; radius: 0.4; radiusTubular: 0.45; arc: 360"
+                      material="side: double; color:#1AB9A4; opacity: 0.01">
+            </a-entity>
+            
+            <a-camera wasd-controls-enabled="false" look-controls="reverseMouseDrag: true" mouse-cursor>
+        
+                <!-- Entity with cursor component and rayOrigin: mouse -->
+                <a-entity cursor="rayOrigin: mouse;" raycaster="objects: .clickable;">
+                  <!-- Add any cursor geometry here -->
+                </a-entity>
+
+
+                <!-- Old Cursor -->
+                <!-- <a-cursor fuse="true" raycaster="objects: .clickable" fuse-timeout="1000"></a-cursor> -->
+
+              </a-camera>
+            
+            <a-entity hand-controls laser-controls raycaster="far: 70"></a-entity>
+
         </a-scene>
 
         <div class="configurator-main-menu container-fluid px-0">
@@ -76,8 +108,8 @@
                 <p class="main-menu-text" href="#">Piso</p>
             </div>
             <div id="btn-b" onclick="showMenuB()" class="col-12 configurator-menu-item">
-                <img class="main-menu-img" src="img/icons/madera-b.svg" />
-                <p class="main-menu-text" href="#">Gabinetes</p>
+                <img class="main-menu-img" src="img/icons/plank-b.svg" />
+                <p class="main-menu-text" href="#">Gabinetes y puertas</p>
             </div>
             <div id="btn-c" onclick="showMenuC()" class="col-12 configurator-menu-item">
                 <img class="main-menu-img" src="img/icons/countertop-b.svg" />
@@ -124,11 +156,11 @@
             <div class="col-12 configurator-sub-menu-spacer">
             </div>
             <div onclick="showMenuCOpA()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">White Dalas</p>
+                <p class="sub-menu-text" href="#" style="color: white;">Granito White Dallas</p>
                 <img class="sub-menu-img" src="img/variaciones/variaciones-01.png" />
             </div>
             <div onclick="showMenuCOpB()" class="col-12 configurator-sub-menu-item">
-                <p class="sub-menu-text" href="#" style="color: white;">Sta. Cecilia</p>
+                <p class="sub-menu-text" href="#" style="color: white;">Granito Sta. Cecilia</p>
                 <img class="sub-menu-img" src="img/variaciones/variaciones-02.png" />
             </div>
             <div onclick="showMenuCOpC()" class="col-12 configurator-sub-menu-item">
@@ -136,8 +168,22 @@
                 <img class="sub-menu-img" src="img/variaciones/variaciones-03.png" />
             </div>
         </div>
+        
 
         <script>
+            
+            // Component to change to a sequential color on click.
+            var sceneEl = document.querySelector('a-scene');
+
+            var boxEl = sceneEl.querySelector('#button-change-environment');
+
+            boxEl.addEventListener('click', function(){
+
+                console.log("Click");
+                window.location.href = 'exterior.php';
+
+            });
+            
             var menuAOpA = document.querySelector("#piso-1-item");
             var menuAOpB = document.querySelector("#piso-2-item");
             var menuAOpC = document.querySelector("#piso-3-item");
@@ -373,7 +419,7 @@
 
 
 		<!-- Javascripts own files  -->
-		<?php echo $own_file_js; ?>
+		
 
 		<?php echo $bootstrap_v4_js; ?>
 

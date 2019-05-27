@@ -319,6 +319,7 @@ a-scene {
     right: 0;
     width: 100%;
     text-align: center;
+    font-size: 1rem;
 }
 
 .main-menu-img{
@@ -336,7 +337,8 @@ a-scene {
     position: absolute;
     text-align: left;
     width: auto;
-    padding-top: 7%;
+    padding-top: 2%;
+    font-size: 1.3rem;
 }
 
 .sub-menu-img{
@@ -395,7 +397,7 @@ a-scene {
 
 
 //and (max-device-width: 1024px)
-@media (max-width:767px) {
+@media screen and (max-width:767px) {
 	.text-xs-center {
 		text-align: center!important;
 	}	
@@ -433,5 +435,27 @@ a-scene {
 	}
 
 	//Estilos particulares
+    
+    .main-menu-text{
+        font-size: 1.3rem;
+    }
+    
+    .sub-menu-text{
+        padding-top: 7%;
+        font-size: 1.2rem;
+    }
+    
+    .configurator-main-menu{
+        width: 20%;
+    }
+    
+    .configurator-sub-menu{
+        width: 60%;
+        margin-left: 20%;
+    }
+    
+    .configurator-sub-menu-spacer{
+        padding-top: 33%;
+    }
 
 }

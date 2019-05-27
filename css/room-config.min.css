@@ -357,7 +357,8 @@ a-scene {
   bottom: 0;
   right: 0;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  font-size: 1rem; }
 
 .main-menu-img {
   position: absolute;
@@ -373,7 +374,8 @@ a-scene {
   position: absolute;
   text-align: left;
   width: auto;
-  padding-top: 7%; }
+  padding-top: 2%;
+  font-size: 1.3rem; }
 
 .sub-menu-img {
   position: absolute;
@@ -418,7 +420,7 @@ a-scene {
   padding-top: 60%;
   background-color: transparent; }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .text-xs-center {
     text-align: center !important; }
 
@@ -444,7 +446,24 @@ a-scene {
     left: 0px; }
 
   .p-right-0-md-down {
-    right: 0px; } }
+    right: 0px; }
+
+  .main-menu-text {
+    font-size: 1.3rem; }
+
+  .sub-menu-text {
+    padding-top: 7%;
+    font-size: 1.2rem; }
+
+  .configurator-main-menu {
+    width: 20%; }
+
+  .configurator-sub-menu {
+    width: 60%;
+    margin-left: 20%; }
+
+  .configurator-sub-menu-spacer {
+    padding-top: 33%; } }
 @media screen and (min-width: 768px) {
   .mover-md-menos-10 {
     transform: translateX(-10px); }
