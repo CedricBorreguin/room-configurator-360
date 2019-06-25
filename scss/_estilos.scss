@@ -311,6 +311,23 @@ a-scene {
     display: block;
 }
 
+.logo {
+    top: 3%;
+    right: 3%;
+    width: 10%;
+    text-align: center;
+}
+
+.contacto {
+    bottom: 3%;
+    right: 8%;
+    text-align: center;
+    max-height: 100px;
+    img {
+        max-width: 40%;
+    }
+}
+
 .main-menu-text{
     color: white;
     position: absolute;
@@ -365,27 +382,27 @@ a-scene {
 }
 
 .configurator-menu-item{
-    background-color: #1AB9A4;
+    background-color: #000000;
     min-width: 9%;
     padding-top: 100%;
 }
 
 .configurator-menu-item-clicked{
-    background-color: #024C4A;
+    background-color: #58595B;
 }
 
 .configurator-menu-item:hover{
-    background-color: #024C4A;
+    background-color: #58595B;
 }
 
 .configurator-sub-menu-item{
     width:auto;
-    background-color: #024C4A;
+    background-color: #58595B;
     height: 4rem;
 }
 
 .configurator-sub-menu-item:hover{
-    background-color: #012625;
+    background-color: #000000;
 }
 
 
@@ -456,6 +473,14 @@ a-scene {
     
     .configurator-sub-menu-spacer{
         padding-top: 33%;
+    }
+    
+    .contacto {
+        right: 6%;
+        bottom: 1%;
+        img {
+            max-width: 30%;
+        }
     }
 
 }

@@ -74,7 +74,7 @@
                       animation="property: geometry.radius; easing: linear; loop: true; from: 1.8; to: 2; dur: 2000"
                       position="-20.4 0 -46.6" rotation="0 90 0" 
                       geometry="primitive: torus; radius: 0.5; radiusTubular: 0.08; arc: 360"
-                      material="side: double; color:#1AB9A4">
+                      material="side: double; color:#000000">
             </a-entity>
             
             <a-entity 
@@ -82,7 +82,7 @@
                       animation="property: geometry.radius; easing: linear; loop: true; from: 0.9; to: 1; dur: 2000"
                       class="clickable" position="-20.4 0 -46.6" rotation="0 90 0" 
                       geometry="primitive: torus; radius: 0.4; radiusTubular: 0.45; arc: 360"
-                      material="side: double; color:#1AB9A4; opacity: 0.01">
+                      material="side: double; color:#000000; opacity: 0.01">
             </a-entity>
             
             <a-camera wasd-controls-enabled="false" look-controls="reverseMouseDrag: true" mouse-cursor>
@@ -114,6 +114,48 @@
             <div id="btn-c" onclick="showMenuC()" class="col-12 configurator-menu-item">
                 <img class="main-menu-img" src="img/icons/countertop-b.svg" />
                 <p class="main-menu-text" href="#">Meseta</p>
+            </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="whatsModal" tabindex="-1" role="dialog" aria-labelledby="whatsModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title fnt-3 avenir-medium ml-auto" id="whatsModalLabel">Contáctanos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <figure class="d-flex justify-content-center py-0">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5219993514929" data-toggle="tooltip" data-placement="top" title="Whatsapp">
+                        <img src="img/whatsapp-black.png" style="max-height: 120px;">
+                    </a>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+            setTimeout(function() {
+                $('#whatsModal').modal('show');
+            }, 10000);
+        </script>
+        
+        <div class="logo position-absolute">
+            <img class="img-fluid logo-img" src="img/logo.png">
+        </div>
+        
+        <div class="contacto position-absolute">
+            <div class="">
+                <p class="avenir-medium fnt-1-5">Contáctanos</p>
+                <figure class="px-auto">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5219993514929" data-toggle="tooltip" data-placement="top" title="Whatsapp">
+                        <img src="img/whatsapp-black.png">
+                    </a>
+                </figure>
             </div>
         </div>
         
